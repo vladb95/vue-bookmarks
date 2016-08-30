@@ -42,7 +42,7 @@ var config = {
         ]
     },
      babel: {
-        presets: ['es2015'],
+        presets: ['es2015', 'stage-1'],
         plugins: ['transform-runtime']
     },
     vue: {

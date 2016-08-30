@@ -1,8 +1,7 @@
 import Vue from 'vue';
+import app from './app';
 
 new Vue({
     el: 'body',
-    data: {
-        test: 77
-    }
+    components: {app}
 });

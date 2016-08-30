@@ -50,13 +50,15 @@
 
 	var _vue2 = _interopRequireDefault(_vue);
 
+	var _app = __webpack_require__(3);
+
+	var _app2 = _interopRequireDefault(_app);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	new _vue2.default({
 	    el: 'body',
-	    data: {
-	        test: 77
-	    }
+	    components: { app: _app2.default }
 	});
 
 /***/ },
@@ -10304,6 +10306,65 @@
 	};
 	process.umask = function() { return 0; };
 
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(4)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] app/app.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(5)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./app.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//     <div id="app">
+	//         <input type="text" v-model="test">
+	//     </div>
+	// </template>
+	//
+	// <script>
+	exports.default = {
+	    data: function data() {
+	        return {
+	            test: 92
+	        };
+	    }
+	};
+	// </script>
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div id=\"app\">\n    <input type=\"text\" v-model=\"test\">\n</div>\n";
 
 /***/ }
 /******/ ]);
